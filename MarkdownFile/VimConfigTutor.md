@@ -17,9 +17,33 @@ vim ~/.vimrc
 ```
 map R :source $MYVIMRC<CR>
 ```
+## syntaxhighlighting
+- 启用语法高亮:`syntax on`
+- 禁用语法高亮:`syntax off`
 
+## number
+启用行号：`set number`
+
+## cursorline
+突出显示当前光标所在行：`set cursorline`
+
+## wrap
+启用文本自动换行：`set wrap`
+
+## showcmd
+显示正在执行的命令（包括按键序列）的提示：`set showcmd`
+
+## wildmenu
+增强命令补全功能（使用方向键或 Tab 键进行切换）：`set wildmenu`
+
+## map 
+在 Vim 中，map 是用于创建键盘映射的命令之一。它用于定义一个递归的键盘映射，也就是说，它会解析已存在的映射。
+
+map 命令的语法如下：
+```
+map {lhs} {rhs}
+```
 ## noremap 
-
 在 Vim 中，noremap 是一个用于创建键盘映射（Key Mapping）的命令。它用于定义一个不递归的键盘映射，也就是说，它会忽略已存在的映射。 
 
 noremap 命令的语法如下：
@@ -27,12 +51,5 @@ noremap 命令的语法如下：
 noremap {lhs} {rhs}
 ```
 
-## map 
 
-在 Vim 中，map 是用于创建键盘映射的命令之一。它用于定义一个递归的键盘映射，也就是说，它会解析已存在的映射。
-
-map 命令的语法如下：
-```
-map {lhs} {rhs}
-```
 
