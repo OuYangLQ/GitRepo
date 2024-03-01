@@ -177,9 +177,26 @@ git remote add origin git@github.com:OuYangLQ/Tutor.git
 git branch -M main
 git push -u origin main
 ```
-
-
-
+## 分支管理
+- 查看分支列表：
+```
+git branch
+```
+- 创建分支
+```
+git branch "branch-name"
+```
+- 切换分支
+```
+git switch "branch-name"
+```
+- 合并分支
+```
+git merge "branch-name"
+```
+- 删除分支
+已合并：`git branch -d "branch-name"`
+未合并：`git branch -D "branch-name"`
 
 
  
