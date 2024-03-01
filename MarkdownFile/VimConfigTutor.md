@@ -22,6 +22,9 @@ map R :source $MYVIMRC<CR>
 - 启用语法高亮:`syntax on`
 - 禁用语法高亮:`syntax off`
 
+## guicursor
+将光标设置为块状：`set guicursor=a:block`
+
 ## number
 启用行号：`set number`
 
