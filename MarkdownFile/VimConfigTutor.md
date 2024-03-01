@@ -20,36 +20,22 @@ $MYVIMRC 是一个环境变量，指向当前用户的 Vim 配置文件，通常
 ```
 map R :source $MYVIMRC<CR>
 ```
+***
+
 ## syntaxhighlighting
 - 启用语法高亮:`syntax on`
 - 禁用语法高亮:`syntax off`
 
-## guicursor
-将光标设置为块状：`set guicursor=a:block`
-
-## number
-启用行号：`set number`
-
-## cursorline
-突出显示当前光标所在行：`set cursorline`
-
-## wrap
-启用文本自动换行：`set wrap`
-
-## showcmd
-显示正在执行的命令（包括按键序列）的提示：`set showcmd`
-
-## wildmenu
-增强命令补全功能（使用方向键或 Tab 键进行切换）：`set wildmenu`、
-
-## hlsearch
-高亮搜索：`set hlsearch` 或者 `set incsearch`
-
-## ignorecase
-忽略大小写：`set ignorecase`
-
-## smartcase
-智能地选择是否忽略大小写：`set smartcase`
+## set
+-将光标设置为块状：`set guicursor=a:block`<br>
+-启用行号：`set number`<br>
+-突出显示当前光标所在行：`set cursorline`<br>
+-启用文本自动换行：`set wrap`<br>
+-显示正在执行的命令（包括按键序列）的提示：`set showcmd`<br>
+-增强命令补全功能（使用方向键或 Tab 键进行切换）：`set wildmenu`、<br>
+-高亮搜索：`set hlsearch` 或者 `set incsearch`<br>
+-忽略大小写：`set ignorecase`<br>
+-智能地选择是否忽略大小写：`set smartcase`<br>
 
 ## map 
 在 Vim 中，map 是用于创建键盘映射的命令之一。它用于定义一个递归的键盘映射，也就是说，它会解析已存在的映射。
@@ -58,6 +44,8 @@ map 命令的语法如下：
 ```
 map {lhs} {rhs}
 ```
+## split-shortcut
+- 向右分屏：`map sl :set splitright<CR>:vsplit<CR>`<br>
 ## noremap 
 在 Vim 中，noremap 是一个用于创建键盘映射（Key Mapping）的命令。它用于定义一个不递归的键盘映射，也就是说，它会忽略已存在的映射。 
 
@@ -72,6 +60,7 @@ noremap {lhs} {rhs}
 let mapleader = "<Space>"
 ```
 *请注意，leader 键的设置通常应该放在 .vimrc 配置文件中，并在 .vimrc 的开头设置，以确保在启动 Vim 时立即生效。*
+
 ***
 ## vim-plug
 在linux环境下使用以下命令从 github 下载插件管理器：
