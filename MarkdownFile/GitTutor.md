@@ -206,6 +206,11 @@ git merge "branch-name"
 3. 提交修改：`git commit -m "message"` 
 - 终止合并，当不想继续执行合并操作时可以使用下面的命令来终止合并过程： 
 `git merge --abort` 
+## 变基-rebase
+Git 中的 "rebase" 是一种常用的操作，它可以用来将一系列提交（commit）应用到另一个分支上。具体来说，rebase 操作会将当前分支上的提交移动到另一个分支的末尾，从而使得当前分支的历史记录变得更加清晰、线性化：
+```
+git rebase <branch>
+```
 
 
 
