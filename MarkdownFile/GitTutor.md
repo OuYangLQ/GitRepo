@@ -203,7 +203,7 @@ git merge "branch-name"
 - 解决方法：
 1. 手工修改冲突文件，合并冲突内容 
 2. 添加暂存区：`git add file` 
-3. 提交修改：`git commit -m "message" 
+3. 提交修改：`git commit -m "message"` 
 - 终止合并，当不想继续执行合并操作时可以使用下面的命令来终止合并过程： 
 `git merge --abort` 
 
