@@ -13,7 +13,7 @@ vim ~/.vimrc
 ```
 3. 保存并退出 .vimrc 文件。
 
-- 如果想要在配置 vim 过程中快速应用配置，可以将 R 键映射为 :source $MYVIMRC,命令 :source $MYVIMRC 用于重新加载当前用户的 Vim 配置文件。$MYVIMRC 是一个环境变量，指向当前用户的 Vim 配置文件，通常默认值为 ~/.vimrc（在 Unix 系统下）。因此，执行 :source $MYVIMRC 命令将重新加载并应用当前用户的 Vim 配置文件，使其中的更改生效。 
+- 如果想要在配置 vim 过程中快速应用配置，可以将 R 键映射为 :source $MYVIMRC,命令 :source $MYVIMRC 用于重新加载当前用户的 Vim 配置文件。$MYVIMRC 是一个环境变量，指向当前用户的 Vim 配置文件，通常默认值为 ~/.vimrc（在 Unix 系统下）。因此，执行 :source $MYVIMRC 命令将重新加载并应用当前用户的 Vim 配置文件，使其中的更改生效。
 **注意：在使用下面的命令前需要先保存当前的配置**
 ```
 map R :source $MYVIMRC<CR>
