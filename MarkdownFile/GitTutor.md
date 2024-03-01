@@ -194,9 +194,9 @@ git switch "branch-name"
 ```
 git merge "branch-name"
 ```
-- 删除分支
-已合并：`git branch -d "branch-name"`
-未合并：`git branch -D "branch-name"`
+- 删除分支  
+已合并：`git branch -d "branch-name"`  
+未合并：`git branch -D "branch-name"`  
 
 
  
