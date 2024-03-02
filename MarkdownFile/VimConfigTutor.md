@@ -46,6 +46,15 @@ map {lhs} {rhs}
 ```
 ## split-shortcut
 - 向右分屏：`map sl :set splitright<CR>:vsplit<CR>`<br>
+- 向左分屏：`map sh :set nosplitright<CR>:vsplit<CR>`<br>
+- 向下分屏：`map sj :set splitbelow<CR>:split<CR>`<br>
+- 向上分屏：`map sk :set nosplitbelow<CR>:split<CR>`<br>
+
+- 光标向右`map <LEADER>l <C-w>l`
+- 光标向左`map <LEADER>h <C-w>h`
+- 光标向下`map <LEADER>j <C-w>j`
+- 光标向上`map <LEADER>k <C-w>k`
+
 ## noremap 
 在 Vim 中，noremap 是一个用于创建键盘映射（Key Mapping）的命令。它用于定义一个不递归的键盘映射，也就是说，它会忽略已存在的映射。 
 
