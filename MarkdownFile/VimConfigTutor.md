@@ -20,22 +20,8 @@ $MYVIMRC 是一个环境变量，指向当前用户的 Vim 配置文件，通常
 ```
 map R :source $MYVIMRC<CR>
 ```
+
 ***
-
-## syntaxhighlighting
-- 启用语法高亮:`syntax on`
-- 禁用语法高亮:`syntax off`
-
-## set
--将光标设置为块状：`set guicursor=a:block`<br>
--启用行号：`set number`<br>
--突出显示当前光标所在行：`set cursorline`<br>
--启用文本自动换行：`set wrap`<br>
--显示正在执行的命令（包括按键序列）的提示：`set showcmd`<br>
--增强命令补全功能（使用方向键或 Tab 键进行切换）：`set wildmenu`、<br>
--高亮搜索：`set hlsearch` 或者 `set incsearch`<br>
--忽略大小写：`set ignorecase`<br>
--智能地选择是否忽略大小写：`set smartcase`<br>
 
 ## map 
 在 Vim 中，map 是用于创建键盘映射的命令之一。它用于定义一个递归的键盘映射，也就是说，它会解析已存在的映射。
@@ -44,6 +30,47 @@ map 命令的语法如下：
 ```
 map {lhs} {rhs}
 ```
+
+## noremap 
+在 Vim 中，noremap 是一个用于创建键盘映射（Key Mapping）的命令。它用于定义一个不递归的键盘映射，也就是说，它会忽略已存在的映射。 
+
+noremap 命令的语法如下：
+```
+noremap {lhs} {rhs}
+```
+
+## leader
+在 Vim 中，leader 是一个特殊的键位，用于定义自定义键位映射的前缀。默认情况下，leader 键位是 \。
+通过设置 mapleader 选项，您可以更改 leader 键位为您喜欢的任何其他键位。
+```
+let mapleader = "<Space>"
+```
+*请注意，leader 键的设置通常应该放在 .vimrc 配置文件中，并在 .vimrc 的开头设置，以确保在启动 Vim 时立即生效。*
+
+***
+
+## BasicConfiguration
+
+- 光标定位到上次编辑的位置：
+```
+au BufReadPost * if line("''\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+```
+
+- 启用语法高亮:`syntax on`
+- 禁用语法高亮:`syntax off`
+
+-将光标设置为块状：`set guicursor=a:block`<br>
+- 启用行号：`set number`<br>
+- 突出显示当前光标所在行：`set cursorline`<br>
+- 启用文本自动换行：`set wrap`<br>
+- 显示正在执行的命令（包括按键序列）的提示：`set showcmd`<br>
+- 增强命令补全功能（使用方向键或 Tab 键进行切换）：`set wildmenu`、<br>
+- 高亮搜索：`set hlsearch` 或者 `set incsearch`<br>
+- 忽略大小写：`set ignorecase`<br>
+- 智能地选择是否忽略大小写：`set smartcase`<br>
+- 启用 list 选项以显示不可打印字符：`set list`
+- 使用特殊符号显示 Tab 和空格：`set listchars=tab:▸\ ,trail:·`
+
 ## split-shortcut
 - 向右分屏：`map sl :set splitright<CR>:vsplit<CR>`<br>
 - 向左分屏：`map sh :set nosplitright<CR>:vsplit<CR>`<br>
@@ -55,22 +82,8 @@ map {lhs} {rhs}
 - 光标向下`map <LEADER>j <C-w>j`
 - 光标向上`map <LEADER>k <C-w>k`
 
-## noremap 
-在 Vim 中，noremap 是一个用于创建键盘映射（Key Mapping）的命令。它用于定义一个不递归的键盘映射，也就是说，它会忽略已存在的映射。 
-
-noremap 命令的语法如下：
-```
-noremap {lhs} {rhs}
-```
-## leader
-在 Vim 中，leader 是一个特殊的键位，用于定义自定义键位映射的前缀。默认情况下，leader 键位是 \。
-通过设置 mapleader 选项，您可以更改 leader 键位为您喜欢的任何其他键位。
-```
-let mapleader = "<Space>"
-```
-*请注意，leader 键的设置通常应该放在 .vimrc 配置文件中，并在 .vimrc 的开头设置，以确保在启动 Vim 时立即生效。*
-
 ***
+
 ## vim-plug
 在linux环境下使用以下命令从 github 下载插件管理器：
 ```
@@ -86,6 +99,59 @@ curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 27 ms: C
 现在提供两个配置选项：<br>
 中国电信提供的免费 DNS Serve:`nameserve 114.114.114.114`<br>
 Google 提供的免费 DNS Serve:`nameserve 8.8.8.8`*
+
 ## vim 插件推荐
 1. 状态栏插件 `vim-airline/vim-airline`
 2. 配色方案插件 `connorholyday/vim-snazzy`
+
+***
+
+## ExpandConfiguration
+
+### 查看全部配置选项：`:help option-list`
+
+### 常用选项配置：
+
+- 文本显示选项：
+
+number：显示行号。
+relativenumber：相对行号，显示当前行与光标所在行的相对行号。
+wrap：自动换行。
+cursorline：高亮当前行。
+showcmd：在底部显示正在输入的命令。
+hlsearch：高亮搜索结果。
+
+- 编辑功能选项：
+
+autoindent：根据上一行自动缩进。
+tabstop：设置 Tab 键的宽度。
+expandtab：将 Tab 键转换为空格。
+shiftwidth：设置缩进宽度。
+smartindent：智能缩进。
+
+- 文件类型相关选项：
+
+filetype plugin on：启用文件类型检测和相关插件。
+syntax on：启用语法高亮。
+
+- 搜索和替换选项：
+
+ignorecase：忽略大小写进行搜索。
+smartcase：在搜索中自动切换大小写敏感/不敏感。
+incsearch：增量搜索，实时显示匹配结果。
+
+- 其他选项：
+
+mouse：启用鼠标支持。
+encoding：设置文件编码。
+backup：生成备份文件。
+clipboard：设置剪贴板的操作方式。
+
+
+
+
+
+
+
+
+
