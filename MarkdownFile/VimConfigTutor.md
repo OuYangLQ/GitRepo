@@ -103,6 +103,7 @@ Google 提供的免费 DNS Serve:`nameserve 8.8.8.8`*
 ## vim 插件推荐
 1. 状态栏插件 `vim-airline/vim-airline`
 2. 配色方案插件 `connorholyday/vim-snazzy`
+3. 
 
 ***
 
