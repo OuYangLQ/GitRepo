@@ -59,7 +59,7 @@ au BufReadPost * if line("''\"") > 1 && line("'\"") <= line("$") | exe "normal! 
 - 启用语法高亮:`syntax on`
 - 禁用语法高亮:`syntax off`
 
--将光标设置为块状：`set guicursor=a:block`<br>
+- 将光标设置为块状：`set guicursor=a:block`<br>
 - 启用行号：`set number`<br>
 - 突出显示当前光标所在行：`set cursorline`<br>
 - 启用文本自动换行：`set wrap`<br>
