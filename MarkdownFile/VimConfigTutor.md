@@ -112,39 +112,34 @@ Google 提供的免费 DNS Serve:`nameserve 8.8.8.8`*
 
 ### 常用选项配置：
 
-- 文本显示选项：
-
-number：显示行号。
-relativenumber：相对行号，显示当前行与光标所在行的相对行号。
-wrap：自动换行。
-cursorline：高亮当前行。
-showcmd：在底部显示正在输入的命令。
+- 文本显示选项：<br>
+number：显示行号。<br>
+relativenumber：相对行号，显示当前行与光标所在行的相对行号。<br>
+wrap：自动换行。<br>
+cursorline：高亮当前行。<br>
+showcmd：在底部显示正在输入的命令。<br>
 hlsearch：高亮搜索结果。
 
-- 编辑功能选项：
-
-autoindent：根据上一行自动缩进。
-tabstop：设置 Tab 键的宽度。
-expandtab：将 Tab 键转换为空格。
-shiftwidth：设置缩进宽度。
+- 编辑功能选项：<br>
+autoindent：根据上一行自动缩进。<br>
+tabstop：设置 Tab 键的宽度。<br>
+expandtab：将 Tab 键转换为空格。<br>
+shiftwidth：设置缩进宽度。<br>
 smartindent：智能缩进。
 
-- 文件类型相关选项：
-
-filetype plugin on：启用文件类型检测和相关插件。
+- 文件类型相关选项：<br>
+filetype plugin on：启用文件类型检测和相关插件。<br>
 syntax on：启用语法高亮。
 
-- 搜索和替换选项：
-
-ignorecase：忽略大小写进行搜索。
-smartcase：在搜索中自动切换大小写敏感/不敏感。
+- 搜索和替换选项：<br>
+ignorecase：忽略大小写进行搜索。<br>
+smartcase：在搜索中自动切换大小写敏感/不敏感。<br>
 incsearch：增量搜索，实时显示匹配结果。
 
-- 其他选项：
-
-mouse：启用鼠标支持。
-encoding：设置文件编码。
-backup：生成备份文件。
+- 其他选项：<br>
+mouse：启用鼠标支持。<br>
+encoding：设置文件编码。<br>
+backup：生成备份文件。<br>
 clipboard：设置剪贴板的操作方式。
 
 
