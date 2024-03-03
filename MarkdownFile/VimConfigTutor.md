@@ -101,9 +101,13 @@ curl: (7) Failed to connect to raw.githubusercontent.com port 443 after 27 ms: C
 Google 提供的免费 DNS Serve:`nameserve 8.8.8.8`*
 
 ## vim 插件推荐
-1. 状态栏插件 `vim-airline/vim-airline`
-2. 配色方案插件 `connorholyday/vim-snazzy`
-3. 
+1. 状态栏插件： `vim-airline/vim-airline`
+2. 配色方案插件： `connorholyday/vim-snazzy`
+3. 代码补全： `ycm-core/YouCompleteMe`<br>
+*使用 vim-plug 进行插件安装时使用更安全的 SSH 协议，进行如下配置：<br>
+`call plug#begin('~/.vim/plugged', { 'do': 'git clone --recursive' })`<br>
+要配置子模块使用 SSH URL，你需要编辑项目的 .gitmodules 文件，并将子模块的 URL 配置从 HTTPS 改为 SSH：<br>
+`url = git@github.com:username/repository.git`*
 
 ***
 
