@@ -46,3 +46,59 @@
       > quit
       ```
     - 启动指定网络接口的守护程序，请**启动/启用** `# systemctl start/enable dhcpcd@'interface'.service`。
+    - dhcpcd 'interface'
+  
+# timedatectl
+# fdisk -l
+# fdisk /dev/the_disk_to_be_partitioned
+# mkfs.ext4 /dev/root_partition
+# mkswap /dev/swap_partition
+# mkfs.fat -F 32 /dev/efi_system_partition
+# mount /dev/root_partition /mnt
+# mount --mkdir /dev/efi_system_partition /mnt/boot
+# swapon /dev/swap_partition
+# curl https://archlinux.org/mirrorlist/all/ -o /etc/pacman.d/mirrorlist
+# pacman -Syu
+# pacstrap -K /mnt base linux linux-firmware vim wpa_supplicant dhcpcd intel-ucode
+# genfstab -U /mnt >> /mnt/etc/fstab
+# arch-chroot /mnt
+# ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+# hwclock --systohc
+# vim /etc/locale.gen
+# locale-gen
+vim /etc/locale.conf
+LANG=en_US.UTF-8
+# echo "ArchLinux" >> /etc/hostname
+# echo "127.0.0.1 localhost" >> /etc/hosts
+# echo "::1 localhost" >> /etc/hosts
+# echo "127.0.1.1 ArchLinux" >> /etc/hosts
+# passwd
+# pacman -S grub efibootmgr
+# mount /dev/sda1 /boot
+# grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+# grub-mkconfig -o /boot/grub/grub.cfg
+# ls /boot
+# exit 
+# reboot
+重新配置网络
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
