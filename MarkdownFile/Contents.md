@@ -1,21 +1,3 @@
-# Contents
-
-## C language
-
-## C++ language
-
-## Vim
-
-## Ranger
-
-## Linux
-
-## Git
-
-## Markdown
-
-## Makefile
-
-## Python
-
-## Database
+```
+# cat /sys/firmware/efi/fw_platform_size
+```
