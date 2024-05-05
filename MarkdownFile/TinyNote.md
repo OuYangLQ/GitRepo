@@ -81,6 +81,9 @@ LANG=en_US.UTF-8
 # exit 
 # reboot
 重新配置网络
+pacman -Syu
+pacman -S xorg xorg-server
+
 
 
 
